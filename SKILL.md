@@ -1,12 +1,17 @@
 ---
 name: secretary-core
-description: 智能助理核心技能，20 轮对话上下文，情感识别，预测建议，7 天自学习周期，意图准确率 95%+。像高级行政秘书一样专业高效。
+description: 智能助理核心技能，20 轮对话上下文，情感识别，预测建议，7 天自学习周期。
 license: MIT
 version: 3.0.0
 author: pengong101
+updated: 2026-03-18
 ---
 
 # Secretary Core v3.0.0 - 智能助理核心
+
+**版本：** 3.0.0  
+**更新日期：** 2026-03-18  
+**作者：** pengong101
 
 像高级行政秘书一样专业高效。
 
@@ -14,72 +19,49 @@ author: pengong101
 
 ## 🎯 核心能力
 
-### 1. 20 轮对话上下文
-- 上下文窗口：20 轮（v3.0 升级）
-- 实体自动关联
-- 多任务并行管理
-- 指代消解
+### v3.0.0 新增
+- ✅ **20 轮对话上下文** - 上下文窗口翻倍（v2.0 的 10 轮）
+- ✅ **情感识别** - 5 种情绪识别（中性/积极/消极/紧急/困惑）
+- ✅ **预测性建议** - 主动预判用户需求
+- ✅ **7 天自学习周期** - 自动学习用户习惯
 
-### 2. 情感识别
-- 5 种情绪识别：中性/积极/消极/紧急/困惑
-- 响应风格自适应
-- 情绪强度分析
-
-### 3. 预测性建议
-- 会议准备
-- 邮件分类
-- 客户信息展示
-- 日程提醒
-
-### 4. 7 天自学习周期
-- 沟通风格学习
-- 工作时间学习
-- 优先级偏好学习
-- 决策风格学习
+### 已有功能
+- ✅ 意图理解（准确率 95%+）
+- ✅ 实体识别
+- ✅ 多轮对话
+- ✅ 上下文继承
 
 ---
 
-## 🚀 使用方式
+## 📦 文件结构
 
-```python
-from secretary_core import SecretaryCoreV3
-
-# 初始化
-secretary = SecretaryCoreV3()
-
-# 响应
-response = secretary.process_message("帮我安排明天的会议")
-print(response['content'])
-
-# 获取建议
-suggestions = response.get('suggestions', [])
+```
+secretary-core/
+├── SKILL.md                  # 技能文档（本文件）
+├── README.md                 # 使用说明
+├── LICENSE                   # MIT 许可证
+├── clawhub.json              # ClawHub 配置
+├── requirements.txt          # Python 依赖
+├── secretary_v3.0.0.py       # v3.0.0 主程序
+├── secretary_v2.1_adaptive.py # v2.1 版本（兼容）
+├── secretary_v2.py           # v2.0 版本（兼容）
+├── secretary_v1.5.py         # v1.5 版本（兼容）
+└── secretary_efficiency_v1.py # v1.0 版本（兼容）
 ```
 
 ---
 
-## 📊 性能指标
+## 📊 版本历史
 
-| 指标 | v2.0 | v3.0 | 提升 |
-|------|------|------|------|
-| 上下文轮数 | 10 | 20 | +100% |
-| 意图准确率 | 90% | 95% | +5% |
-| 响应时间 | 200ms | 150ms | -25% |
-| 情感识别 | ❌ | ✅ | 新增 |
-| 预测建议 | ❌ | ✅ | 新增 |
-
----
-
-## 📦 安装
-
-```bash
-cd /root/.openclaw/workspace/skills
-git clone https://github.com/pengong101/secretary-core.git
-cd secretary-core
-pip3 install -r requirements.txt
-```
+| 版本 | 日期 | 主要更新 |
+|------|------|---------|
+| **v3.0.0** | 2026-03-18 | 20 轮上下文、情感识别、预测建议、自学习 |
+| v2.1.0 | 2026-03-14 | 自适应响应、性能优化 |
+| v2.0.0 | 2026-03-13 | 10 轮上下文、主动预判 |
+| v1.5.0 | 2026-03-12 | 多轮对话优化 |
+| v1.0.0 | 2026-03-11 | 初始版本 |
 
 ---
 
-**版本：** 3.0.0  
-**发布日期：** 2026-03-18  
-**GitHub:** https://github.com/pengong101/secretary-core
+**最后更新：** 2026-03-18  
+**版本：** 3.0.0 (Latest)
